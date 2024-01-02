@@ -1,0 +1,96 @@
+.start-screen-container {
+    background-image: url(/src/assets/menu.png);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 552px;
+    height: 270px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+}
+
+
+.header {
+    padding-top: 40px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    font-family: pokemon-retro;
+    width: 100%;
+    text-align: center;
+}
+
+.options-container {
+    margin-top: -16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+    height: 100%;
+}
+
+.option {
+    margin-left: 45px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-self: center;
+    gap: 8px;
+    width: 100%;
+}
+
+.option-btn {
+    width: 100%;
+    height: 100%;
+    text-align: left;
+    font-family: pokemon-retro;
+    font-size: 1rem;
+    font-weight: 600;
+    background: none;
+	border: none;
+	padding: 12px;
+	cursor: pointer;
+    margin-left: 20px; /*gap + size of arrow*/
+}
+
+.option-arrow {
+    width: 12px;
+    height: 20px;
+    margin-left: -572px;
+    visibility: hidden;
+    animation: blinker .8s linear infinite;
+}
+
+@keyframes blinker {
+    50% {
+      opacity: 0;
+    }
+  }
+
+.option-btn:hover + .option-arrow{
+    visibility: visible;
+}
+
+#game-over-header {
+    margin-top: -30px;
+    font-size: 1rem;
+}
+
+.menu-gif {
+    padding: 10px;
+    width: 40%;
+}
+#play-again-btn {
+    margin-top: -15px;
+    text-align: center;
+    width: calc(100% - 77px);
+    font-size: .9rem;
+}
+
+#play-again-btn:hover {
+    scale: 1.1;
+}

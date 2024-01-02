@@ -1,0 +1,49 @@
+@font-face {
+    font-family: pokemon-retro;
+    src: url(/src/assets/PokemonGb-RAeo.ttf);
+}
+
+.html {
+    display: flex;
+    justify-content:  center;
+    align-items: center;
+    margin: 0;
+}
+
+:root {
+    width: 100% !important;
+    height: 100%;
+    background-image: url(../assets/background2.jpg);
+    background-size: cover;
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+}
+
+.header-logo {
+    height: 50px;
+    padding: 1rem 2rem 1rem 2rem;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.score-board {
+    font-family: pokemon-retro;
+    font-weight: 1000;
+    position: absolute;
+    left: 50%;
+    margin-left: -100px;
+    width: 200px;
+}
