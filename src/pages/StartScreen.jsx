@@ -11,7 +11,7 @@ function StartScreen({difficulty, shuffleCards, show, setShow}) {
         setTimeout(() => {
             shuffleCards(y);
             setShow(!show);
-        },400)
+        },500)
     }
 
     return (
