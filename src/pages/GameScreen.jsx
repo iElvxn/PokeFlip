@@ -59,13 +59,12 @@ function GameScreen({shuffleCards, cardsToDisplay, score, setScore, show, setSho
         if(difficulty.current === "easy") {
             totalRounds = 5;
         } else if(difficulty.current == "medium") {
-            totalRounds = 9
+            totalRounds = 9;
         } else if(difficulty.current == "hard") {
             totalRounds = 15;
         }
 
         if(score == (totalRounds - 1)) {
-            console.log("ended")
             setIsFinished(true);
             winner.current = true;
             resetGame();
