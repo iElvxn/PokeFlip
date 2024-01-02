@@ -2,7 +2,6 @@ import headerlogo from '../assets/headerlogo.png'
 
 function Header({score, difficulty}) {
     let totalRounds;
-    console.log(difficulty)
     if(difficulty.current === "easy") {
         totalRounds = 5;
     } else if(difficulty.current == "medium") {

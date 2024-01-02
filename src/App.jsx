@@ -64,7 +64,7 @@ function App() {
     (
       <>
         <Header score={score} difficulty={difficulty} />
-        {show ? <GameScreen shuffleCards={shuffleCards} cardsToDisplay={cardsToDisplay} score={score} setScore={setScore} show={show} setShow={setShow}/> : <StartScreen /*setDifficulty={setDifficulty}*/difficulty={difficulty} shuffleCards={shuffleCards} show={show} setShow={setShow}/>}
+        {show ? <GameScreen shuffleCards={shuffleCards} cardsToDisplay={cardsToDisplay} score={score} setScore={setScore} show={show} setShow={setShow} difficulty={difficulty}/> : <StartScreen /*setDifficulty={setDifficulty}*/difficulty={difficulty} shuffleCards={shuffleCards} show={show} setShow={setShow}/>}
       </>
     )
     : null}

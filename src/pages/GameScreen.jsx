@@ -7,7 +7,7 @@ import clickAudio from "../assets/click-sound.mp4";
 let characters = characterHandler.characters;
 const clickSound = new Audio(clickAudio);
 
-function GameScreen({shuffleCards, cardsToDisplay, score, setScore, show, setShow}) {
+function GameScreen({shuffleCards, cardsToDisplay, score, setScore, show, setShow, difficulty}) {
     const [isAnimating, setIsAnimating] = useState(false);
     const [isFinished, setIsFinished] = useState(false);
     let isFlipped = useRef(false);
@@ -55,7 +55,16 @@ function GameScreen({shuffleCards, cardsToDisplay, score, setScore, show, setSho
     }
 
     const checkWinner = () => {
-        if(score == 14) {
+        let totalRounds;
+        if(difficulty.current === "easy") {
+            totalRounds = 5;
+        } else if(difficulty.current == "medium") {
+            totalRounds = 9
+        } else if(difficulty.current == "hard") {
+            totalRounds = 15;
+        }
+
+        if(score == (totalRounds - 1)) {
             console.log("ended")
             setIsFinished(true);
             winner.current = true;
