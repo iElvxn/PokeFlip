@@ -1,6 +1,6 @@
 import '../styles/StartScreen.css'
 import arrow from '../assets/arrow.png'
-import characterHandler from '../assets/Characters';
+import characterHandler from '../assets/characters';
 import menuClickAudio from "../assets/poke-click.mp4";
 const menuClickSound = new Audio(menuClickAudio);
 
@@ -11,7 +11,7 @@ function StartScreen({difficulty, shuffleCards, show, setShow}) {
         setTimeout(() => {
             shuffleCards(y);
             setShow(!show);
-        },200)
+        },400)
     }
 
     return (

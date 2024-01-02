@@ -1,15 +1,14 @@
-import { useState, useEffect, useRef } from 'react'
-import characterHandler from './assets/Characters';
-import Header from './components/Header'
+import { useState, useEffect, useRef } from 'react';
+import characterHandler from './assets/characters';
+import Header from './components/Header';
 import StartScreen from './pages/StartScreen';
-import GameScreen from './pages/GameScreen'
-import './styles/App.css'
+import GameScreen from './pages/GameScreen';
+import './styles/App.css';
 let characters = characterHandler.characters;
 
 function App() {
   const [isLoadingOver, setIsLoadingOver] = useState(false);
   let difficulty = useRef();
-  //const [difficulty, setDifficulty] = useState();
   const [show, setShow] = useState(false)
   const [score, setScore] = useState(0);
   const [cardsToDisplay, setCardsToDisplay] = useState(0);
@@ -64,7 +63,7 @@ function App() {
     {isLoadingOver ?
     (
       <>
-        <Header score={score} />
+        <Header score={score} difficulty={difficulty} />
         {show ? <GameScreen shuffleCards={shuffleCards} cardsToDisplay={cardsToDisplay} score={score} setScore={setScore} show={show} setShow={setShow}/> : <StartScreen /*setDifficulty={setDifficulty}*/difficulty={difficulty} shuffleCards={shuffleCards} show={show} setShow={setShow}/>}
       </>
     )

@@ -1,7 +1,7 @@
 import '../styles/GamePage.css'
 import { useState, useEffect, useRef } from "react";
 import Card from "../components/Card";
-import characterHandler from '../assets/Characters';
+import characterHandler from '../assets/characters';
 import GameOver from "../pages/GameOver";
 import clickAudio from "../assets/click-sound.mp4";
 let characters = characterHandler.characters;
