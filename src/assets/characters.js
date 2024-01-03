@@ -10,12 +10,19 @@ async function getRandomPokemon() {
             return response.json();
         })
         .then(function(response) {
+            let imgSRC = response.sprites.front_default;
+            let isShiny = false;
+            if(response.sprites.front_shiny !== null && Math.floor(Math.random() * (501)) === 7) { //any random number 1/500 chance
+                imgSRC = response.sprites.front_shiny;
+                isShiny = true;
+            }
 
             const pokemonObj = {
                 id: response.id,
                 name: response.name,
-                src: response.sprites.front_default,
+                src: imgSRC,
                 flipped: false,
+                isShiny: isShiny,
             }
             characters.push(pokemonObj);
         })
